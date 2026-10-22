@@ -4,7 +4,37 @@
 <p align="center">
   <a href="https://pytorch.org/"><img alt="PyTorch" src="https://img.shields.io/badge/framework-PyTorch-ee4c2c"></a>
   <a href="https://huggingface.co/RicePasteM/RiO-DETRv2"><img alt="Hugging Face models" src="https://img.shields.io/badge/models-Hugging%20Face-yellow"></a>
-  <a href="LICENSE"><img alt="License: Apache 2.0" src="https://img.shields.io/badge/license-Apache--2.0-blue"></a>
+  <a href="https://arxiv.org/abs/2610.29159"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2610.29159-red"></a>
+  <a href="LICENSE"><img alt="License: AGPL-3.0" src="https://img.shields.io/badge/license-AGPL--3.0-blue"></a>
+</p>
+
+<div align="center">
+  Zhangchi Hu<sup>1</sup>,
+  Zilong He<sup>1</sup>,
+  Yifan Zhao<sup>1</sup>,
+  Xiangyu Yu<sup>1</sup>,
+  Jie Chen<sup>1</sup>,
+  Peixi Wu<sup>1</sup>,
+  Yansong Peng<sup>1</sup>,
+  Hebei Li<sup>1,*</sup>,
+  Xiaoyan Sun<sup>1,2</sup>
+</div>
+
+<p></p>
+
+<div align="center">
+<i>1. University of Science and Technology of China</i>
+</div>
+
+<div align="center">
+<i>2. Institute of Artificial Intelligence, Hefei Comprehensive National Science Center</i>
+</div>
+
+<p></p>
+
+<p align="center">
+  <b>Corresponding author:</b>
+  <a href="mailto:lihebei@mail.ustc.edu.cn">lihebei@mail.ustc.edu.cn</a>
 </p>
 
 <p align="center">
@@ -36,9 +66,7 @@
 We challenge **RiO-DETRv2** with high-resolution Jilin-1 satellite footage of Bogota Airport, Colombia. Under moving cloud cover and dense aircraft layouts, the model delivers well-aligned oriented detections across successive frames, showcasing its capability in dynamic satellite scenes.
 
 <p align="center">
-  <a href="assets/riov2_bogota_airport_1080p.mp4">
-    <img src="assets/riov2_bogota_airport_preview.png" alt="RiO-DETRv2 oriented object detection demo at Bogota Airport" width="960">
-  </a>
+  <video src="assets/riov2_bogota_airport_1080p.mp4" poster="assets/riov2_bogota_airport_preview.png" width="960" controls muted loop playsinline></video>
 </p>
 
 RiO-DETRv2-X uses DOTA-1.0 pretrained weights and tiled inference. Video credit: [Paul Sed, "Jilin-1 Live streaming from space - Bogota, Colombia"](https://www.youtube.com/watch?v=a5BazZA8nvk).
@@ -304,7 +332,7 @@ The benchmark uses GPU-resident buffers and CUDA events to measure TensorRT exec
 
 ## License
 
-RiO-DETRv2 is released under the [Apache 2.0 License](LICENSE). Third-party code, foundation models, and pretrained weights retain their respective licenses.
+RiO-DETRv2 is released under the [GNU Affero General Public License v3.0](LICENSE). Third-party code, foundation models, and pretrained weights retain their respective licenses.
 
 ## Acknowledgements
 

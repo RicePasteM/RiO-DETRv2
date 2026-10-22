@@ -1,10 +1,9 @@
-<h1 align="center">RiO-DETRv2</h1>
-<h3 align="center">Distributional Refinement for Real-Time Oriented Object Detection</h3>
+<h2 align="center">RiO-DETRv2: Distributional Refinement for Real-Time Oriented Object Detection</h2>
 
 <p align="center">
+  <a href="https://arxiv.org/abs/2610.29159"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2610.29159-red"></a>
   <a href="https://pytorch.org/"><img alt="PyTorch" src="https://img.shields.io/badge/framework-PyTorch-ee4c2c"></a>
   <a href="https://huggingface.co/RicePasteM/RiO-DETRv2"><img alt="Hugging Face models" src="https://img.shields.io/badge/models-Hugging%20Face-yellow"></a>
-  <a href="https://arxiv.org/abs/2610.29159"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2610.29159-red"></a>
   <a href="LICENSE"><img alt="License: AGPL-3.0" src="https://img.shields.io/badge/license-AGPL--3.0-blue"></a>
 </p>
 

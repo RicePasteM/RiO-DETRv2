@@ -65,9 +65,11 @@
 
 We challenge **RiO-DETRv2** with high-resolution Jilin-1 satellite footage of Bogota Airport, Colombia. Under moving cloud cover and dense aircraft layouts, the model delivers well-aligned oriented detections across successive frames, showcasing its capability in dynamic satellite scenes.
 
-<p align="center">
-  <video src="assets/riov2_bogota_airport_1080p.mp4" poster="assets/riov2_bogota_airport_preview.png" width="960" controls muted loop playsinline></video>
-</p>
+<div align="center">
+
+https://github.com/user-attachments/assets/c4136f3a-2a70-422b-9e06-5a299fc75925
+
+</div>
 
 RiO-DETRv2-X uses DOTA-1.0 pretrained weights and tiled inference. Video credit: [Paul Sed, "Jilin-1 Live streaming from space - Bogota, Colombia"](https://www.youtube.com/watch?v=a5BazZA8nvk).
 

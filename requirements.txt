@@ -1,0 +1,17 @@
+# torch==2.2.2
+# torchvision==0.17.2
+numpy
+opencv-python-headless
+Pillow
+packaging
+faster-coco-eval>=1.6.5
+PyYAML
+tensorboard
+scipy
+matplotlib
+calflops
+transformers
+timm>=1.0.27
+# Oriented metrics use the bundled evaluator.
+numba>=0.65.1
+pycocotools==2.0.11

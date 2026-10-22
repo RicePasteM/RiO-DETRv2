@@ -1,0 +1,44 @@
+task: detection
+
+evaluator:
+  type: HRSCEvaluator
+  iou_types: ['mAP']
+
+num_classes: 1
+remap_mscoco_category: False
+
+train_dataloader:
+  type: DataLoader
+  dataset:
+    type: HRSC2016Dataset
+    img_folder: ./datasets/hrsc2016/FullDataSet/AllImages
+    ann_folder: ./datasets/hrsc2016/FullDataSet/Annotations
+    ann_file:
+      - ./datasets/hrsc2016/ImageSets/train.txt
+      - ./datasets/hrsc2016/ImageSets/val.txt
+    return_masks: False
+    transforms:
+      type: Compose
+      ops: ~
+  shuffle: True
+  num_workers: 4
+  drop_last: True
+  collate_fn:
+    type: BatchImageCollateFunction
+
+val_dataloader:
+  type: DataLoader
+  dataset:
+    type: HRSC2016Dataset
+    img_folder: ./datasets/hrsc2016/FullDataSet/AllImages
+    ann_folder: ./datasets/hrsc2016/FullDataSet/Annotations
+    ann_file: ./datasets/hrsc2016/ImageSets/test.txt
+    return_masks: False
+    transforms:
+      type: Compose
+      ops: ~
+  shuffle: False
+  num_workers: 4
+  drop_last: False
+  collate_fn:
+    type: BatchImageCollateFunction

@@ -1,0 +1,46 @@
+task: detection
+
+evaluator:
+  type: AITODREvaluator
+  iou_types: ['mAP']
+  iou_thrs: [0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95]
+
+num_classes: 8
+remap_mscoco_category: False
+
+train_dataloader:
+  type: DataLoader
+  dataset:
+    type: AITODDataset
+    img_folder: ./datasets/ai-tod-r/images/trainval
+    ann_folder: ./datasets/ai-tod-r/labels_dota/trainval
+    return_masks: False
+    transforms:
+      type: Compose
+      ops: ~
+  shuffle: True
+  num_workers: 4
+  drop_last: True
+  collate_fn:
+    type: BatchImageCollateFunction
+
+val_dataloader:
+  type: DataLoader
+  dataset:
+    type: AITODDataset
+    img_folder: ./datasets/ai-tod-r/images/test
+    ann_folder: ./datasets/ai-tod-r/labels_dota/test
+    # Excluded corrupt PNGs; retained to reproduce the reported experiment split.
+    exclude_ids:
+      - '2413__2736_1200'
+      - 'P2492__1.0__0___0'
+      - '1051__0_2400'
+    return_masks: False
+    transforms:
+      type: Compose
+      ops: ~
+  shuffle: False
+  num_workers: 4
+  drop_last: False
+  collate_fn:
+    type: BatchImageCollateFunction

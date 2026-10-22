@@ -1,0 +1,45 @@
+task: detection
+
+evaluator:
+  type: DotaEvaluator 
+  iou_types: ['mAP'] 
+
+num_classes: 20
+remap_mscoco_category: False
+
+train_dataloader: 
+  type: DataLoader
+  dataset: 
+    type: DiorDataset
+    img_folder: ./datasets/dior-r/JPEGImages-trainval
+    ann_folder: ./datasets/dior-r/Annotations/Oriented Bounding Boxes
+    ann_file: 
+      - ./datasets/dior-r/ImageSets/Main/train.txt
+      - ./datasets/dior-r/ImageSets/Main/val.txt
+    return_masks: False
+    transforms:
+      type: Compose
+      ops: ~
+  shuffle: True
+  num_workers: 4
+  drop_last: True 
+  collate_fn:
+    type: BatchImageCollateFunction
+
+
+val_dataloader:
+  type: DataLoader
+  dataset: 
+    type: DiorDataset
+    img_folder: ./datasets/dior-r/JPEGImages-test
+    ann_folder: ./datasets/dior-r/Annotations/Oriented Bounding Boxes
+    ann_file: ./datasets/dior-r/ImageSets/Main/test.txt
+    return_masks: False
+    transforms:
+      type: Compose
+      ops: ~ 
+  shuffle: False
+  num_workers: 4
+  drop_last: False
+  collate_fn:
+    type: BatchImageCollateFunction

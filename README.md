@@ -1,4 +1,4 @@
-<h2 align="center">RiO-DETRv2: Distributional Refinement for Real-Time Oriented Object Detection</h2>
+<h2 align="center">RiO-DETRv2: Geometry-Aware Uncertainty Modeling Meets Real-Time Oriented Object Detection Transformer</h2>
 
 <p align="center">
   <a href="https://arxiv.org/abs/2610.29159"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2610.29159-red"></a>

@@ -48,7 +48,7 @@
 **RiO-DETRv2 is a real-time, end-to-end oriented object detector that refines both object boundaries and orientation through learned distributions.**
 
 <p align="center">
-  <img src="assets/dota_accuracy_latency.png" alt="DOTA-v1.0 accuracy versus inference latency on NVIDIA T4" width="900">
+  <img src="assets/dota_accuracy_latency.png" alt="DOTA-v1.0 accuracy versus inference latency on NVIDIA T4" width="500">
   <br>
   <em>DOTA-v1.0 accuracy versus inference latency on NVIDIA T4.</em>
 </p>
